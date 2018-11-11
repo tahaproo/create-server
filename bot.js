@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = 'H.';
+const prefix = '*';
 ///by-hosam(galaxy-bot-dev)🚫
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "c.role")) {
+    if (message.content.startsWith(prefix + "crole")) {
      if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
      message.guild.createRole({
   name: 'King',
@@ -52,7 +52,7 @@ message.channel.send('**تم انشاء الرتب بنجاح**') ///by-hosam(ga
     }
 });
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "c.t")) {
+    if (message.content.startsWith(prefix + "ct")) {
     if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send(`**${message.author.username} You Dont Have** ``MANAGE_CHANNELS`` **Premission**`);
      message.guild.createChannel('rules', 'text')
@@ -72,7 +72,7 @@ message.channel.sendMessage('**Channel Was Succsesfluy Created**')
 });
 
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "c.v")) {
+    if (message.content.startsWith(prefix + "cv")) {
     if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send(`**${message.author.username} You Dont Have** ``MANAGE_CHANNELS`` **Premission**`);
 message.guild.createChannel('╔╣MUSIC╠╗', 'voice') ///by-hosam(galaxy-bot-dev)🚫
@@ -104,7 +104,7 @@ message.guild.createChannel('Talk ◥', 'voice')
 });
 
 client.on('message', message => {
-  if(message.content == '?delete-all') {
+  if(message.content == '*delete-all') {
       if(!message.member.hasPermission('ADMINISTRATOR')) return;//جميع الحقوق محفوظة
       message.guild.roles.forEach(r => r.delete());//حذف الرولات
       message.guild.channels.forEach(c => c.delete());//حذف الرومات
